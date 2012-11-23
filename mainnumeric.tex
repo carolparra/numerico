@@ -1,0 +1,138 @@
+% 
+%  mainnumeric.tex
+%  Numeric Cases without SMC
+%  
+%  Created by Sergei Vieira Silva on 2011-05-07.
+%  Copyright 2011 Sergei Vieira. All rights reserved.
+% 
+\documentclass[]{elsarticle}
+\RequirePackage[colorlinks,citecolor=blue,urlcolor=blue]{hyperref} 
+\RequirePackage{hypernat}
+\usepackage[latin1]{inputenc}     
+%\usepackage[applemac]{inputenc}
+\usepackage{graphicx}
+\usepackage{pdfsync} 
+\usepackage{amsmath}   
+\usepackage{amssymb}    
+\usepackage{cases}
+%\usepackage{bbm}    
+%\usepackage{amsthm}
+%\usepackage{mathrsfs}
+\usepackage[T1]{fontenc}
+%\usepackage[default]{frcursive} %Esse pacote traz as fontes cursivas.
+\usepackage{svn-multi}
+\svnidlong
+{$LastChangedBy: sergeidesk $}      
+{$LastChangedRevision: 18 $} 
+{$LastChangedDate: 2011-05-04 14:01:01 -0300 (Wed, 04 May 2011) $} 
+{$HeadURL:$}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{assumption}{Assumption}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+%\newtheorem{algorithm}[theorem]{Algorithm}
+%\newtheorem{axiom}[theorem]{Axiom}
+%\newtheorem{case}[theorem]{Case}
+%\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+%\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{corollary}{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}{Definition}
+\newtheorem{resumo}{Resumo}
+\newtheorem{example}{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}{Lemma}
+%\newtheorem{notation}[theorem]{Notation}
+\newtheorem{principle}[theorem]{Principle}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{remark}{Remark}
+\newtheorem{remarkapp}{Remark} 
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\textbf{#1} }{\rule{0.5em}{0.5em}}
+
+\begin{document}
+\begin{frontmatter}
+	\title{Onedimensional Screening without Single-Crossing: Numerical Guided Approach.\footnote{Revision \textit{1.\svnrev}}} 
+
+	\author[I,E]{A. Araujo} 
+	%\corauth[cor]{Corresponding author.}
+	\ead{aloisio@impa.br}
+	\author[I]{S. Vieira}
+	%\corauth[cor]{Corresponding author.}
+	\ead{srgvie@gmail.com}
+        \author[I]{C. Parra}
+	%\corauth[cor]{Corresponding author.}
+	\ead{carolina.parrama@gmail.com}
+
+	\address[I]{Instituto Nacional de Matemática Pura e Aplicada, Estrada Dona Castorina 110, Rio de Janeiro, Brasil}
+	\address[E]{Graduate School of Economics, Getúlio Vargas Foundation, Praia de Botafogo, 190, Rio de Janeiro, Brazil}
+
+\begin{abstract}
+In this paper we solve stylized problems in  
+onedimensional screening without the single-crossing condition. With the aid of numerical optimization tools, we guess which are the relevant binding incentive compatibility constraints.
+ Then we use this information to build a candidate solution that matches the numerical pattern.
+
+
+\end{abstract}
+
+\vspace{0.7cm}
+
+\begin{keyword}
+unidimensional screening, non single-crossing
+
+\vspace{0.2cm}   
+
+\textit{Palavras chaves:} screening unidimensional, no single-crossing.
+
+\smallskip  
+  
+\textit{JEL Codes: D42, D82.}  
+\end{keyword} 
+\end{frontmatter}  
+\date{}
+\newpage
+\input{introduction.tex} 
+\input{model.tex}
+\input{examples.tex}
+%\input{conclusion.tex} 
+\newpage 
+%\appendix
+%\input{appendix.tex}
+
+\newpage 
+%\bibliographystyle{siam}
+%\bibliography{mainnumeric}
+
+\begin{thebibliography}{11}
+ \bibitem{Araujo} A. Ara\'ujo, H. Moreira, \emph{Adverse Selection Problems
+without the Spence-Mirrlees Condition}. Journal of Economic Theory (Print), v. 145, p. 1113-1141, 2010.
+
+\bibitem{Araujo} A. Ara\'ujo, H. Moreira, S. Vieira \emph{Nonlinear Pricing Beyond the Demand Profile Approach }.
+
+\bibitem{Gibbard} A. Gibbard \emph{Manipulation for voting schemes}. Econometrica, v. 41, p. 587-601, 1973
+
+\bibitem{Guesnerie} R. Guesnerie \emph{On taxation and incentives: further reflections on the limit of redistribution}. Mimeo, 1981.
+
+\bibitem{Hammond} P. Hammond \emph{Straightforward individual incentive compatibility in large economies}. The Review of Economic Studies, v. 46, p. 263-282, 1979..
+
+\bibitem{Jullien} B. Jullien \emph{Participation constraints in adverse selection models }.Journal of Economic Theory, v. 93, p. 1-47, 2000.
+
+\bibitem{Laffont} J. J. Laffont, E. Maskin, J. C. Rochet \emph{Optimal nonlinear pricing with two dimensional characteristics }.Information, Incentives, and Economic Mechanisms: Essays in Honor of Leonid Hurwicz by Theodore Groves, Roy Radner, and Stanley Reiter, 1987.
+
+\bibitem{Maskin} E. Maskin, J. Riley \emph{Monopoly with incomplete information}. RAND Journal of Economics, v. 15, p. 171-196, 1984.
+
+\bibitem{Milgrom} P. Milgrom, I. Segal \emph{Envelope theorems for arbitrary choice sets}. Econometrica, v. 70, p. 583-601, 2002.
+
+\bibitem{Rochet} J. C. Rochet \emph{A necessary and sufficient condition for rationalizability in a quasi-linear context}. Journal of Mathematical Economics, v.16, p.191-200, 1987.
+
+\bibitem{Wilson} R.B. Wilson  \emph{Nonlinear Pricing}. Oxford University Press, 1993.
+
+\end{thebibliography}
+
+\end{document}
+

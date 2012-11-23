@@ -1,0 +1,203 @@
+
+
+\section{Model}
+\label{sec:model}  
+We use the Principal-Agent framework to analyse the monopolistic screening problem. In this model, each agent has a  quase-linear preference, $$V(q,t,\theta)=v(q,\theta)-t,$$
+ were $t$ represents the monetary transfer. The type of consumer  $\theta \in \Theta$ is a random variable with a density $p$ positive and continuous. The firm is a profit-maximizing monopolist
+which can produce any quality $q \in Q \subset \mathbb{R}_{+}$ incurring in a cost $C(q)$. $Q$ represents  the quality spectrum. The monopolist revenue is given by 
+$$\Pi(q,t)= t-C(q).$$\\
+
+Using the \textit{Revelation Principle} \footnote{The Revelation Principle has been enunciated in Gibbard [3]} the mopolist's problem can be stated as 
+choosing the allocation rule $(q,t): \Theta \rightarrow \mathbb{R}_{+} \times \mathbb{R}$ that solves
+
+\begin{equation}
+\label{maxi}
+ \underset{ \{ q(\cdot), t(\cdot) \}  }{max} \, \int_{\Theta} \Pi(q(\theta),t(\theta))p(\theta)d\theta,
+\end{equation}
+
+  subject to the \textit{Individual-Racionality} constraints
+
+   $$v(q(\theta),\theta) - t(\theta) \geq 0 \, \, \forall \, \theta \in \Theta, $$
+
+and the \textit{Incentive Compatibility} constraints
+
+$$\theta \in arg \underset{\theta'\in \Theta}{max}  \{ v(q(\theta'),\theta) -t(\theta') \} \, \, \forall \, \theta \in \Theta. $$
+
+\begin{remark}
+ The 'Taxation Principle' \footnote{The principle can be found in Guesnerie [4], Hammond [5] and Rochet [10].} states that any allocation 
+$(q,t)$ satisfying the Incentive Compatibility constraints can be implemented by a nonlinear tariff $T: Q = q(\Theta) \rightarrow \mathbb{R} $ where $$T(q(\theta))=t(\theta),\, \, \forall \, \theta \in \Theta.$$
+\end{remark}
+
+One of the greatest difficulties related to the monopolist's problem is how to deal with the IC
+constraints. In general, the binding IC constraints may be determined only endogenously which
+makes it a rather difficult task.
+
+\begin{definition}
+The single-crossing or Spence-Mirrlees condition (SMC) is the constant sign of the cross partial derivative with respect to decision and type\\
+
+$\hspace{4cm} v_{q\theta} > 0 \, \, \, on \, \, Q \times \Theta \hspace{4cm} (CS_{+})$ \\
+or \\ 
+
+$\hspace{4cm} v_{q\theta} < 0 \, \, \, on \, \, Q \times \Theta \hspace{4cm} (CS_{-})$ \\
+ 
+\end{definition}
+
+
+We assume that the allocation rule $(q,t)$ is bounded and incentive compatible. The informational rent $V: \Theta \rightarrow \mathbb{R}_{+}$ is given by 
+\begin{equation}
+\label{renta}
+V(\theta)= v(q(\theta),\theta)-t(\theta),
+\end{equation}
+and $T:q(\Theta) \rightarrow \mathbb{R}$ is the tariff resulting from the \textit{Revelation Principle}.
+
+\begin{lemma}
+ The tariff $T$ and the informational rent $V$ are Lipschitz continuous.
+\end{lemma}
+The Lemma 1 guarantees that $T$ and $V$ are a.e differentiable.
+
+\begin{lemma} \hspace{2cm}
+ \begin{enumerate}[(i)]
+  \item If $V$ is differentiable at $\theta \in int(\Theta)$ and $q \in q(\theta)$, then
+     \begin{equation}
+      V'(\theta)=v_{\theta}(q,\theta).
+      \end{equation}
+
+  \item If $T$ is differentiable at $q \in q(\theta)\cap int(q(\Theta))$, then
+     \begin{equation}
+      T'(\theta)=v_{q}(q,\theta).
+      \end{equation}
+\end{enumerate}
+
+\end{lemma}
+
+Lemma 2 (ii) is the first order condition of the $\theta-$customer maximization problem $$\theta \in \underset{q\in Q}{max} \{ v(q,\theta) - T(q) \}.$$
+
+\begin{remark}
+With the SMC a decision is incentive compatible if and only if is monotonic. However, without the SMC we many have a nonmonotonic incentive compatible decision.
+\end{remark}
+
+
+\section{The Monopolist's Problem}
+\label{sec:monopolist}
+We assume the following conditions:
+
+\begin{enumerate}[(i)]
+\item $ \, v(q,\theta) \in C^{3},$
+\item $ \, v_{qq} < 0$ and $v_{\theta}>0$ 
+\item $ \, v_{q^2\theta} > 0 $ and $v_{q\theta^{2}} >0 ,$
+\item $ \, C(0)=0,\,C'(q)>0$ and $C''(q)<0$ 
+ 
+\end{enumerate}
+
+
+
+Suppose that the alocation rule $(q,t)$ is incentive compatible and define the informational rent by $V(\theta)=v(q(\theta),\theta)-t(\theta)$. Let us now deduce the monopolist's maximization problem, using the same derivation as Mussa and Rosen. \\
+From the definition of the informational rent
+$V$ we can write the monetary transfer as $t(\theta)=v(q(\theta),\theta)-V(\theta)$ and then substitute it in equation (\ref{maxi}). The result is the following problem
+\begin{equation}
+ \underset{ \{q(\cdot)\} }{max} \int_{\Theta} \{  v(q(\theta),\theta) -C(q(\theta)) -V(\theta)\}d\theta.
+\end{equation}
+
+Using the Lemma 2 and integration by parts, we get $V(\theta)=\int_{\underline{\theta}}^{\theta} v_{\theta} (q(\theta),s) \,ds$ \footnote{By assumption (ii), V is increasing and we can set $V (\underline{\theta})= 0$, eliminating the IR constraints.} and we can rewrite the monopolist's problem as\\
+
+$$\hspace{4cm} \underset{\{q(\cdot)\}}{max} \int_{\underline{\theta}}^{\overline{\theta}} f(q(\theta),\theta)p(\theta) d\theta, \hspace{4cm} (\Pi_{R})$$ 
+
+were $f(q,\theta)=v(q(\theta),\theta)-C(q(\theta)) + \dfrac{P(\theta)-1}{p(\theta)} v_{\theta}(q(\theta),\theta).$\\
+
+
+This problem is called the relaxed version of the mopolist's maximization problem. The Euler's equation gives the necessary
+condition for an extremum of problem ($\Pi_{R}$).
+
+\begin{equation}\label{euler}
+ f_{q}(q,\theta)=0
+\end{equation}
+
+Let us denote the solution of equation (\ref{euler}) by $Q_{1}(\theta)$. If $Q_{1}(\theta)$ satisfies the constraints then it is the
+solution of the monopolist's problem.\\
+
+\begin{remark}
+In many situations the solution of problem ($\Pi_{R}$) is far from being incentive compatible. We are going to derive the monopolist's optimization
+problem in cases were the globals (IC) can be taken into account.
+\end{remark}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+
+Unlike the case with SMC, a decision function satisfying the first- and second-order conditions of the customer's maximization
+problem may not be implementable.\\
+
+Araújo and Moreira [1]  propose the following generalization of the (SMC):\\
+
+(AM1) \, \, $v_{q\theta}(\xi,\theta)=0 $ defines a decreasing function $Q_{0}:\Theta \rightarrow \mathbb{R}_{+}$ such that 
+
+\begin{equation}
+\forall \, \theta \in \Theta \, \, v_{q\theta}(\xi,\theta) \geq 0 \Leftrightarrow \xi \geq Q_{0}(\theta).
+\end{equation}
+
+So the curve $Q_{0}$ divides the $(\theta,q)$ plane in two regions: $CS_{+}$, where $v_{q\theta} > 0$ and $CS_{-}$, where
+$v_{q\theta} < 0$.\\
+
+
+ In this case, without the Single-Crossing Condition, globals incentive compatibility constrains can be binding.\\
+
+ Example, in the horizontal case ilustrated in Figure 1.\\
+
+
+
+In this case, we will impose the global incentive compatibility constrains relating $\theta_{d}$ and $\theta_{2}$ customers. The same procedure used in [2] \footnote{i.e that the $\theta_{2}$-type does not envy $\theta_{d}$-type} impose:
+\begin{equation}
+ v(q({\theta_{2}}),\theta_{2}) - t(\theta_{2}) \geq v(q(\theta_{d}),\theta_{2}) - t(\theta_{d}).
+\end{equation}
+ 
+\begin{lemma}
+ Consider an allocation rule $(q,t): \Theta \rightarrow \mathbb{R}_{+}\times \mathbb{R}$. If $(q,t)$ is incentive compatible then
+
+\begin{equation}
+ \int_{\hat{\theta}}^{\theta} \int_{q(\hat{\theta})}^{q(\tilde{\theta})} v_{q\theta} (\tilde{q},\tilde{\theta}) d\tilde{q} d\tilde{\theta} \geq 0, \, \, \, \forall \, \theta, \hat{\theta} \in \Theta
+\end{equation}
+
+\end{lemma}
+
+Notice that
+
+\begin{equation}
+ 0 \leq \int_{\theta_{d}}^{\theta_{2}} \int_{q(\theta_{d})}^{q(\tilde{\theta})} v_{q\theta} (\tilde{q},\tilde{\theta}) d\tilde{q} d\tilde{\theta} = \int_{\theta_{d}}^{\theta_{2}} \int_{q_{1}}^{q_{2}} v_{q\theta} (\tilde{q},\tilde{\theta}) d\tilde{q} d\tilde{\theta} + \int_{\theta_{d}}^{\theta_{2}} \int_{q_{2}}^{q(\tilde{\theta})} v_{q\theta} (\tilde{q},\tilde{\theta}) d\tilde{q} d\tilde{\theta}
+\end{equation}
+
+we can rewrite the integrals on the right hand side and determinate the isoperimetric condition (ISO).
+
+\begin{equation}
+ 0 \leq \int_{\theta_{d}}^{\theta_{2}}  v_{\theta} (q(s),s)  ds - \int_{\theta_{d}}^{\theta_{2}}  v_{\theta} (q(\theta_{d}),s) ds \, \, \, (ISO)
+\end{equation}
+
+In the interval $[\theta_{d},\theta_{2}]$, we will optimally choose $q(\theta)$ such that the condition (ISO) is fulfilled. So we have the following isoperimetric problem
+
+\begin{equation}
+\label{pi_iso}
+ \underset{ \{q(\cdot) \} }{max} \int_{\theta_{d}}^{\theta_{2}} f(q(\theta),\theta) d\theta 
+\end{equation}
+$$ s.t \, \, \, \, (ISO)$$
+
+The following theorem can be founded in [2].
+
+\begin{theorem}
+\label{teo1}
+The solution of (\ref{pi_iso}) is characterized by the following condition
+\begin{equation}
+ f_{q}(q,\theta) + \lambda v_{q\theta}(q,\theta) = 0
+\end{equation}
+were $\lambda$ is chosen to satisfy the condition (ISO) with equality.
+\end{theorem}
+
+\section{Numerical Optimization}
+The monopolist's problem ($\Pi$) can be approximated by their discretization and be solved numerically  as a monopolist's problem with a finite number of types. We use the language AMPL and the solver Knitro 
+for to obtain information about the solution to the problem with incentive compatibility constraints, more precisely, information about the global I.C that must be binding. This information together with the Theorem 1 allow us to find the optimal 
+decision in several cases.
+ 
+
+
+
